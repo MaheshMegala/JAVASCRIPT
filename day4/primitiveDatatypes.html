@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>primitive data types</title>
+</head>
+<body>
+  <script>
+    // primitive data types string
+    let text = "Hello World";
+    let sentence = "This is a sentence";
+    console.log(text);
+    console.log(typeof text);
+    console.log(sentence);
+    console.log(typeof sentence);
+    // primitive data types number
+    let number = 10;
+    console.log(number);
+    console.log(typeof number);
+    let decimal = 10.5;
+    console.log(decimal);
+    console.log(typeof decimal);
+    // primitive data types boolean
+    let isTrue = true;
+    console.log(isTrue);
+    console.log(typeof isTrue);
+    let isFalse = false;
+    console.log(isFalse);
+    console.log(typeof isFalse);
+    // primitive data types null
+    let empty = null;
+    console.log(empty);
+    console.log(typeof empty);
+    //primitive data types undefined
+    let email;
+    console.log(email);
+    console.log(typeof email);
+
+    // primitive data types symbol
+    let symbol = Symbol('File');
+    let symbol2 = Symbol('File');
+    console.log(symbol == symbol2);
+    console.log(symbol === symbol2);
+    //equal and strict equal
+    let a=10;
+    let b="10";
+    add = a+b;
+    console.log(add);
+    console.log(a==b);
+    console.log(a===b);
+    //bigInt
+    let bigInt = 1234567890123456789012345678901234567890n;
+    console.log(bigInt);
+    console.log(typeof bigInt);
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unary Operators</title>
+</head>
+<body>
+  <h1>Unary Operators</h1>
+  <p>operate on a single operand</p>
+  <p>Unary plus (+) - converts an operand into a number</p>
+  <p>Unary minus (-) - negates an operand</p>
+  <p>Logical NOT (!) - converts true to false and false to true</p>
+  <p>Increment (++) - increments a variable by 1</p>
+  <p>Decrement (--) - decrements a variable by 1</p>
+  <script>
+    let x = 10;
+    let y = -x;
+    document.write(y);
+    let z = +x;
+    document.write("<br>");
+    document.write(z);
+
+
+    let a = true;
+    let b = !a;
+    document.write("<br>");
+    document.write(b);
+    document.write("<br>");
+
+
+    let c = 10;
+    let d = c++; //10
+    document.write(d);
+    result = d;
+    document.write("<br>");
+    document.write("result: " + result);
+    document.write("<br>");
+
+
+
+
+    let e = c--; //c=11, e=11
+    document.write("e value: " + e);
+    document.write("<br>");
+    // console.log(x, y, z, a, b, c, d, e);
+  </script>
+  
+</body>
+</html>

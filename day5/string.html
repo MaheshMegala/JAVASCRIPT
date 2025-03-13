@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>string operations</title>
+</head>
+<body>
+  <h1>string operations</h1>
+  <script>
+    let firstName = 'Ajay';
+    let lastName = 'Kumar';
+    let middleName = 'bhupathi';
+    let name = firstName +' '+ middleName+' '+lastName; // Concatenation
+    document.write(name + '<br>'); // Output: AjayKumar
+    document.write(name.length + '<br>'); // Output: 9
+    document.write(name.toUpperCase() + '<br>'); // Output: AJAY KUMAR
+    document.write(name.toLowerCase() + '<br>'); // Output: ajay kumar
+    document.write(name.charAt(0) + '<br>'); // Output: A
+    document.write(name.charAt(name.length - 1) + '<br>'); // Output: r
+    document.write(name.substring(1, 6) + '<br>'); // Output: jay
+    document.write(name.slice(-3) + '<br>'); // Output: mar
+    document.write(name.split(' ') + '<br>'); // Output: Ajay,Kumar
+    document.write(name.split('') + '<br>'); // Output: A,j,a,y,,,K,u,m,a,r
+    document.write(name.replace('Ajay', 'Vijay') + '<br>'); // Output: Vijay Kumar
+    document.write(name.includes('Ajay') + '<br>'); // Output: true
+    document.write(name.includes('Vijay') + '<br>'); // Output: false
+    document.write(name.indexOf('Kumar') + '<br>'); // Output: 5
+    document.write(name.indexOf('Krishna') + '<br>'); // Output: -1
+    document.write(name.lastIndexOf('a') + '<br>'); // Output: 8
+    document.write(name.lastIndexOf('z') + '<br>'); // Output: -1
+    document.write(name.charAt(name.length-1) + '<br>'); // Output: r
+    document.write(name.charAt(name.length - 2) + '<br>'); // Output: a
+    document.write(name.charAt(name.length - 3) + '<br>'); // Output: m
+    document.write(name.charAt(name.length - 4) + '<br>'); // Output: u
+    document.write(name.charAt(name.length - 5) + '<br>'); // Output: K
+    document.write(name.charAt(name.length - 6) + '<br>'); // Output: ' '
+    document.write(name.charAt(name.length - 7) + '<br>'); // Output: y
+    document.write(name.charAt(name.length - 8) + '<br>'); // Output: a
+    document.write(name.charAt(name.length - 9) + '<br>'); // Output: j
+        
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>logical Operators</title>
+</head>
+<body>
+  <h1>Logical Operators</h1>
+  <p>Logical operators are used to determine the logic between variables or values.</p>
+  <script>
+    let x= 10;
+    let y= 20;
+    let z= 30;
+    let result;
+    document.write("x=10, y=20, z=30 <br>");
+    // AND
+    result= (x<y) && (y<z);
+    document.write(result);//true
+    document.write("<br>");
+    // OR
+    result= (x<y) || (y<z);
+    document.write(result); //true
+    document.write("<br>");
+    // NOT
+    result= !(x<y);
+    result1= !(x>y);
+    document.write("result:"+result); //false
+    document.write("<br>");
+    document.write("result1:"+result1); //true
+    document.write("<br>");
+
+
+
+  </script>
+  
+</body>
+</html>

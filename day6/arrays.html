@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays Operations</title>
+</head>
+<body>
+  <h1>Array operations</h1>
+  <script>
+    //creating an array of cars
+    let car1 = "Toyota";
+    let car2 = "Honda";
+    let car3 = "BMW";
+    let car4 = "Audi";
+    let car =[car1, car2, car3, car4];
+    document.write(car + "<br>");
+    //creating an array of fruits
+    // let fruits = ["Apple", "Banana", "Mango", "Orange"];
+    // document.write(fruits + "<br>");
+    // console.log(fruits);
+    //accessing the elements of an array
+    document.write(car[0] + "<br>");
+    document.write(car[1] + "<br>");
+    document.write(car[2] + "<br>");
+    document.write(car[3] + "<br>");
+    //changing the value of an array
+    car[0] = "Mercedes";
+    document.write(car + "<br>");
+    //adding an element to an array
+    car.push("Toyota");
+    document.write(car + "<br>");
+    //removing an element from an array
+    car.pop();
+    // car.pop();
+    // car.pop();
+    document.write(car + "<br>");
+    //length of an array
+    document.write(car.length + "<br>");
+    //sorting an array
+    car.sort();
+    document.write(car + "<br>");
+    //reversing an array
+    car.reverse();
+    document.write(car + "<br>");
+    //slicing an array
+    let car5=car.slice(1, 4);
+    document.write(car5 + "<br>");
+    //joining an array
+    // let car6 = car.join("+");
+    // document.write(car6 + "<br>");
+    // console.log(car6);
+    // //splitting an array
+    
+    //splitting a string
+    let name = "shamem pasha hai hello how are you?";
+    let human = name.split(" ");
+    document.write(human + "<br>");
+
+    //concatenating an array
+    let car6 = ["Mercedes", "Toyota", "Honda", "BMW", "Audi"];
+    let car7 = ["Ford", "Chevrolet", "Jeep", "Dodge"];
+    let car8 = car6.concat(car7);
+    document.write(car8 + "<br>");
+    console.log(car8);
+
+    //finding an element in an array
+    // let car9 = car8.indexOf("Jeep");
+    let car9 = car8.find(
+      function(car){
+      return car == "bolero";
+    }
+  );
+    document.write(car9 + "<br>");
+
+    //filtering an array
+    let car10 = car8.filter(
+      function(car){
+        return car.length > 4;
+      }
+    );
+    document.write(car10 + "<br>");
+
+    
+
+
+
+
+  </script>
+  
+</body>
+</html>

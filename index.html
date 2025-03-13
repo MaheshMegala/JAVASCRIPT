@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Google Signup Example</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<!-- Google Logo (you can customize the image) -->
+<img src="https://developers.google.com/identity/images/g-logo.png"
+     id="googleSignup"
+     alt="Sign in with Google"
+     style="cursor:pointer; width:50px; height:50px;" />
+
+<!-- Output user info -->
+<div id="user-info"></div>
+
+<script>
+    window.onload = function() {
+        google.accounts.id.initialize({
+            client_id: "YOUR_GOOGLE_CLIENT_ID",  // Replace with your actual client ID
+            callback: handleCredentialResponse
+        });
+
+        // Trigger Google One Tap or Sign-In when logo is clicked
+        document.getElementById('googleSignup').addEventListener('click', () => {
+            google.accounts.id.prompt(); // Optional One Tap
+            google.accounts.id.renderButton(document.getElementById('googleSignup'), {
+                theme: "outline", size: "large"
+            });
+        });
+    }
+
+    function handleCredentialResponse(response) {
+        console.log('Google Credential Response:', response);
+
+        // Decode the token (JWT) to get user info
+        const user = parseJwt(response.credential);
+        console.log('User Information:', user);
+
+        // Show user info on the page
+        document.getElementById('user-info').innerHTML = `
+            <h3>Welcome, ${user.name}</h3>
+            <img src="${user.picture}" alt="${user.name}" style="width:50px; height:50px; border-radius:50%;" />
+            <p>Email: ${user.email}</p>
+        `;
+    }
+
+    function parseJwt(token) {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        return JSON.parse(jsonPayload);
+    }
+</script>
+
+</body>
+</html>
